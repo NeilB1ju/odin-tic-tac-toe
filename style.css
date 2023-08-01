@@ -152,3 +152,12 @@ button:hover{
     opacity: 1;
     pointer-events: all;
 }
+
+
+/* Media Queries */
+@media (max-width: 600px) {
+    .board{
+        grid-template-rows: repeat(3, 100px);
+        grid-template-columns: repeat(3, 100px);
+    }
+}
