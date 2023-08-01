@@ -91,3 +91,64 @@ button:hover{
     background-color: var(--header-bg);
     transition: filter 0.2s ease-in-out;
 }
+
+
+/* Styling the Modal */
+
+.modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border-radius: 20px;
+    z-index: 10;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:8px;
+    background-color: var(--header-bg);
+    height: 200px;
+    width: 260px;
+    padding: 10px;
+}
+
+.modal.active{
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-text{
+    font-size: 1.8rem;
+}
+
+.modal-button{
+    font-size: 25px;
+    width: 150px;
+    padding: 5px;
+    height: auto;
+    border-style: none;
+    border-radius: 8px;
+    background-color: var(--body-bg);
+    border: 2px solid black;
+}
+
+.modal-button:hover{
+    opacity: 70%;
+} 
+
+.overlay{
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.7);
+    pointer-events: none;
+}
+
+.overlay.active{
+    opacity: 1;
+    pointer-events: all;
+}
